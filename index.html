@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,75 +21,201 @@
     ></script>
   </head>
   <body>
-    <!-- update bootstrap style of navbar -->
-    <nav class="navbar navbar-light bg-white">
-      <div class="container-fluid justify-content-end">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav text-end">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#previous">Previous Work</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <nav class="navbar navbar-light">
+    <div class="container-fluid justify-content-end dropdown">
+      <button
+        class="btn dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li class="dropdown-item">
+            <a class="dropdown-link" href="#about">About</a>
+          </li>
+          <li class="dropdown-item">
+            <a class="dropdown-link" href="#previous">Previous Work</a>
+          </li>
+          <li class="dropdown-item">
+            <a class="dropdown-link" href="#projects">Projects</a>
+          </li>
+          <li class="dropdown-item">
+            <a class="dropdown-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
     <header></header>
 
-    <main class="container mt-4">
-      <div class="row" data-masonry='{"percentPosition": true }'>
+    <main class="container py-8">
+      <div class="row" data-masonry='{"percentPosition": true }' style="position: relative;">
+
+        <!--
+        -->
+
         <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="card border-0" id="about">       
+          <div class="card border-0" id="picture3">
+            <img 
+              class="card-img rounded-3" 
+              src="../images/DelanieAndCal.JPG"
+              alt="Delanie and Calvin "
+              aria-label="Delanie and Calvin "
+              />
           </div>
         </div>
 
         <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="card border-0" id="picture">
+          <div class="card" id="about">       
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card border-0" id="picture4">
+            <img 
+              class="card-img rounded rounded-3" 
+              src="../images/Suki.JPG"
+              alt="Suki the Siamese Cat in front of a plant. "
+              aria-label="Suki the Siamese Cat in front of a plant. "
+              />
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card" id="previous">
+            <div class="card-body">
+            <h5 class="card-title">
+              Past Experience
+            </h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-0">
+                <h6>Technical Course Support Specialist</h6>
+                <span>Portland State University</span><br>
+                <span>April 2024 -- December 2024</span>
+                <ul>
+                  <li>
+                    Support computer science students with questions about classwork for Karla Fant’s 200 and 300 level courses in Data Structures and Computer Programming.
+                  </li>
+                  <li>
+                    Classwork focused on C++, Python and Java.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="list-group-item border-0">
+                <h6>Customer Service and Sales Representative</h6>
+                <span>Hummingbird Wholesale</span><br>
+                <span>Oct 2020 -- March 2023</span>
+                <ul>
+                  <li>
+                    Provided excellent customer service to business partners including answering inquiries and executing returns.
+                  </li>
+                  <li>
+                    Reduced product returns from wholesale customers by 50% from 2020 to 2021 by creating and implementing improved invoice procedures and team training, resulting in $9,650 savings and improved customer satisfaction.
+                  </li>
+                </ul>
+              </li>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card border-0 rounded rounded-4" id="picture5">
+            <img 
+              class="card-img" 
+              src="../images/Family.JPG"
+              alt="Delanie, Calvin and Suki pose together.  "
+              aria-label="Delanie, Calvin and Suki pose together. "
+              />
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card" id="projects">
+            <div class="card-body">
+            <h5 class="card-title">
+              Projects
+            </h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-0">
+                <h6>BikePed Portal Weather Data Integration</h6>
+                <span>PostgreSQL, Python, Highcharts</span><br>
+                <span>January 2025 -- June 2025</span>
+                <ul>
+                  <li>
+                    This project is currently in progress.  The goal is to add historical and current weather data to BikePed's existing database and to create triggers for new historical weather data to be pulled when locations are added to database.
+                  </li>
+                  <li>
+                    Data will be displayed on the BikePed Portal, implemented with Python and Highcharts.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="list-group-item border-0">
+                <h6>Instant Messenger</h6>
+                <span>MongoDB, Express.js, React.js, Node.js, Socket.io, Postman</span><br>
+                <span>April 2024 -- June 2024</span>
+                <ul>
+                  <li>
+                    Developed a full-stack web application using with Express and Node serving a REST API with React as the front end.
+                  </li>
+                  <li>
+                    Implemented Google OAuth 2.0 for user authentication.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card border-0 rounded rounded-4" id="picture">
             <img 
               class="card-img" 
               src="../images/Delanie.JPG"
               alt="Picture of Delanie wearing a bicycle helmet. "
               aria-label="Picture of Delanie wearing a bicycle helmet. "
-              style="border-radius: 50%; max-width: 200px;"
               />
           </div>
         </div>
 
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card" id="contact">
+            <div class="card-body">
+              <h5 class="card-title">Contact Delanie</h5>
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="name" class="form-control" id="name" aria-label="Name">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" aria-label="Email">
+                </div>
+                <div class="mb-3">
+                  <label for="text" class="form-label">Say something</label>
+                  <input class="form-control" type="text" id="text" aria-label="Text input.">
+                </div>
+                <div class="form-group my-4">
+                  <input type="submit" class="btn w-25" value="Submit" />
+                  <input type="reset" class="btn w-25" value="Reset" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div id="art">
+
+          </div>
+        </div>
 
       </div>
-
-      <section id="previous">
-        <h2>Previous Work</h2>
-      </section>
-
-      <section id="projects">
-        <h2>Projects</h2>
-      </section>
-
-      <section id="contact">
-        <h2>Contact Delanie</h2>
-
-        <!-- Add form -->
-      </section>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

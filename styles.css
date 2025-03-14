@@ -1,0 +1,20 @@
+
+
+#previous, #about, #projects, #contact {
+    border-color: white;
+}
+
+#previous:hover, #about:hover, #projects:hover, #contact:hover {
+    border-radius: 4px;
+    border-color: black;
+}
+
+.dropdown-menu {
+    --bs-dropdown-link-active-bg: white;
+    --bs-dropdown-link-color: black;
+    --bs-dropdown-link-hover-color: grey;
+    --bs-dropdown-link-hover-bg: none;
+    --bs-dropdown-link-active-color: grey;
+    --bs-dropdown-border-color: white;
+
+}
