@@ -44,10 +44,17 @@ const fetchData = (url) => {
     let div = document.createElement("div");
     div.classList.add("card", "border-0", "rounded", "rounded-4");
 
+    let image = data.primaryImage ? data.primaryImage : "../images/placeholder.jpg";
+    let object = data.objectName ? data.objectName : "Unknown. ";
+    let title = data.title ? data.title : "n/a";
+    let artist = data.artistDisplayName ? data.artistDisplayName : "n/a";
+    let date = data.objectDate ? data.objectDate : "n/a";
+    
+
     div.innerHTML = `
-    <img src="${data.primaryImage}" class="img-card-top" alt="${data.objectName}" style="max-width: 540px;">
+    <img src="${image}" class="img-card-top" alt="${object}" style="max-width: 540px;">
         <div class="card-body">
-            <p class="card-text">${data.title} by ${data.artistDisplayName}, ${data.objectDate}</p>
+            <p class="card-text">${title} by ${artist}, ${date}</p>
         </div>
     `
     art.appendChild(div);
