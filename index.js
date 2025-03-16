@@ -52,13 +52,31 @@ const fetchData = (url) => {
     
 
     div.innerHTML = `
-    <img src="${image}" class="img-card-top" alt="${object}" style="max-width: 540px;">
+    <img src="${image}" class="img-card-top rounded rounded-4" alt="${object}" style="max-width: 540px;">
         <div class="card-body">
             <p class="card-text">${title} by ${artist}, ${date}</p>
         </div>
     `
     art.appendChild(div);
   }
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+  
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const text = document.getElementById("text").value;
+  
+      console.log("======= Form Submission ========");
+      console.log("Name:", name);
+      console.log("Email:", email);
+      console.log(text);
+    });
+  });
+  
 
   makeAboutMe();
 
